@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração de Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7ecec;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #ff0000;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #surpresa {
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        #botao {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #coracao {
+            display: none;
+            width: 100px;
+            height: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Estilizando o vídeo */
+        #video-container {
+            display: none;
+            margin-top: 20px; /* Ajuste a margem superior do vídeo */
+            margin-bottom: 50px;
+            max-width: 100%;
+            width: 560px;
+        }
+
+        #video {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Declaração de Amor</h1>
+    <p>Querida [nome da pessoa amada],</p>
+    <p>Você é a pessoa mais especial do mundo para mim. Minha vida é mais brilhante e feliz por ter você ao meu lado.</p>
+    <button id="botao" onclick="mostrarSurpresa()">Clique para ver a surpresa</button>
+    <p id="surpresa">[Sua surpresa romântica aqui]</p>
+    <img id="coracao" src="https://emojicdn.elk.sh/❤️" alt="Coração Pulsante">
+
+    <!-- Vídeo do YouTube incorporado -->
+    <div id="video-container">
+        <iframe id="video" src="https://www.youtube.com/embed/1M5cfMOg4m8" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function mostrarSurpresa() {
+            const surpresa = document.getElementById("surpresa");
+            surpresa.style.display = "block";
+            const botao = document.getElementById("botao");
+            botao.style.display = "none";
+            const coracao = document.getElementById("coracao");
+            coracao.style.display = "block";
+            const videoContainer = document.getElementById("video-container");
+            videoContainer.style.display = "block";
+        }
+    </script>
+</body>
+</html>
